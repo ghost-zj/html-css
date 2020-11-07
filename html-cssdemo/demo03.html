@@ -1,0 +1,130 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>css选择器优先级</title>
+        <style type="text/css">
+        /*基本选择器*/
+        /*id选择器*/
+            #page_1{
+            background: burlywood;
+            }
+           /* #123page{
+            background: burlywood;
+            }*/
+            #page{
+            background: burlywood;
+            }
+            /*class选择器*/
+            /*.123page{
+            background: burlywood;
+            }*/
+            .text{
+            background: burlywood;
+            }
+            .section{
+            background: burlywood;
+            }
+            .text.section{
+            background: burlywood;
+            }
+
+            /*层次选择器*/
+            .list2,.list3{
+                background-color: blue;
+            }
+            /*后代选择器、包含选择器、派生选择器*/
+            #ul1 .list1{background-color: brown;}
+
+            /*子选择器*/
+            .ul3 li{
+                color: cornflowerblue;
+            }
+            /*.ul3>li{color: cornflowerblue;}*/
+            /*.ul4 li{
+                color: crimson;
+            }*/
+            .ul4>li{
+                color: crimson;
+            }
+            /*相邻兄弟选择器*/
+            .list8+li{
+                color: darkmagenta;
+            }
+            /*通用选择器*/
+            .list9~li{
+                color: deeppink;
+            }
+
+            /*属性选择器*/
+            [target]{
+                color: red;
+            }
+            /*[target="_self"]{
+                color: rosybrown;
+            }*/
+
+            /*常用的结构伪类选择器*/
+            ol li:first-child{
+                color: seagreen;
+            }
+            ol li:nth-child(2){color: sienna;}
+            ol li:last-child{color: skyblue;}
+        </style>
+    </head>
+    <body>
+        <p id="page_1">下划线ID</p>
+        <p id="123page" class="123pade">数字开头ID、class</p>
+        <p id="page">id</p>
+        <p id="page">第二个id</p>
+        <p class="text">text</p>
+        <p class="section">section</p>
+        <p class="text section">text-section</p>
+
+        <ul id="ul1">
+            <li>包含</li>
+            <li class="list1">list1</li>
+            <li class="list2">list2</li>
+            <li>list</li>
+        </ul>
+        <ul id="ul2">
+            <li class="list3">list3</li>
+            <li class="list4">list4</li>
+        </ul>
+
+        <ul class="ul3">
+            <li>list7</li>
+            <li>list5
+                <ul>
+                    <li>list6</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="ul4">
+            <li>第一个li</li>
+            <ul>
+                <li>第二个li</li>
+            </ul>
+        </ul>
+
+        <ul id="ul5">
+            <li>相邻</li>
+            <li class="list8">list8</li>
+            <li class="list9">list9</li>
+            <li>list</li>
+            <li>list10</li>
+            <li>list11</li>
+            </ul>
+
+            <a href="" target="_self">self</a>
+            <a href="" target="_blank">blank</a>
+            <p>p</p>
+
+            <ol>
+                <li class="list12">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ol>
+    </body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>弹性盒+自适应布局</title>
+        <meta name="viewport" content="
+        width=device-width,initial-scale=1.0,
+        minimum-scale=1.0,
+        maximum-scale=1.0,user-scalable=no,minimal-ui">
+        <script type="text/javascript" src="tools/html5.js"></script>
+        <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*弹性盒---flex*/
+        /*容器属性*/
+        ul{
+            list-style: none;
+            display:flex;
+        }
+        
+        /*弹性盒---flex-direction:column(垂直：上-下)/row：排：左-右*/
+        .container{
+            width: 100vw;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            background: burlywood;
+            height: 50px;
+        }
+        section{
+            background: pink;
+            flex: 1;
+        }
+        footer{
+            background: plum;
+            height: 50px;
+        }
+        /*flex-wrap:wrap--一条轴线排不下进行换行*/
+        ol{
+            list-style: none;
+            display:flex;
+            flex-wrap: wrap;
+        }
+        ol li{
+            height: 100px;
+            width: 100px;
+            background: burlywood;
+            /*flex:1;*/
+        }
+        /*flex-flow:flex-direction flex-wrap;*/
+        .ul1{
+            list-style: none;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .ul1 li{
+            width: 100px;
+            background: pink;
+        }
+
+        /*子元素水平排列--justify-content:flex-start/flex-end/center/space-between/space-around;*/
+        .ul2{
+            list-style:none;
+            position: fixed;
+            bottom: 0;
+            border-top: 1px solid purple;
+            width:100%;
+            height: 80px;
+            display:flex;
+            justify-content: flex-end;
+        }
+        .ul2 li{
+            background: purple;
+        }
+
+        /*子元素垂直居中--align-items:flex-start/flex-end/center/baseline/stretch*/
+        .ul3{
+            list-style: none;
+            width: 500px;
+            height: 500px;
+            border: 1px solid burlywood;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: crimson;
+        }
+        .ul3 li{
+            width: 100px;
+            height: 100px;
+            color: chartreuse;
+            font-size: 24px;
+            border: cornflowerblue solid 1px;
+        }
+
+        /*项目属性*/
+        /*项目的放大比例，默认为0（如果存在剩余空间也不放大）flex-grow*/
+        .ul4{
+            height: 800px;
+            width: 800px;
+            border: 5px solid blue;
+            display: flex;
+        }
+        .ul4 li{
+            width: 100px;
+            flex-grow:1;
+            background: plum;
+            margin: 10px;
+            font-size: 24px;
+        }
+        .ul4 .li{
+            flex-grow: 3;
+        }
+
+        /*项目的缩小比例，默认值为1（空间不足，自动缩小）flex-shrink*/
+        .ul5{
+            width: 700px;
+            height: 700px;
+            border: 5px solid burlywood;
+            display: flex;
+        }
+        .ul5 li{
+            width:400px;
+            height: 100%;
+            background: cadetblue;
+            margin: 5px;
+        }
+        /*在分配多余空间之前，项目占据的主轴空间：flex-basis*/
+        .ul6{
+            width: 700px;
+            height: 700px;
+            border: 5px solid burlywood;
+            display: flex;
+        }
+        .ul6 li+li{
+            background: cadetblue;
+            margin: 5px;
+            flex-grow: 1; 
+        }
+        .li01{
+            width: 250px;
+            margin: 5px;
+            background: chartreuse;
+        }
+
+        /*flex属性：flex-grow flex-shrink flex-basis;默认值为0，1，auto,后面两个属性可选*/
+        /*参考第二个例子*/
+
+
+
+
+
+        /*自适应布局*/
+        /*单位尺寸：vh\vw:视口*/
+        /*谷歌浏览器的默认字体为16px,1em=16px;
+        em:针对于父元素的font-size
+        rem:针对于根元素（html:根元素）*/
+        .text{
+            font-size: 50px;
+        }
+        .text01{
+            width: 1em;
+            height: 1em;
+            background: cyan;
+        }
+
+        /*html5移动手机页面自适应布局*/
+        .text02 section{
+            background: darkcyan;
+            width: 100%;
+            
+            height: 1.3333333333rem;
+            font-size: .426666666666rem;
+            color: blueviolet;
+            
+            /*50/37.5;
+            16/37.5*/
+        }
+
+        </style>
+    </head>
+    <body>
+        <!-- 容器属性 -->
+        <ul>
+            <li>首页</li>
+            <li>菜单</li>
+            <li>收藏</li>
+            <li>我的</li>
+        </ul>
+
+        <div class="container">
+            <header>头部</header>
+            <section>中间</section>
+            <footer>尾部</footer>
+        </div>
+
+        <ol>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ol>
+
+        <ul class="ul1">
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+
+        <ul class="ul2">
+            <li>首页</li>
+            <li>个人中心</li>
+            <li>收藏</li>
+        </ul>
+
+        <ul class="ul3">
+            <li>朱一龙</li>
+        </ul>
+
+        <!-- 项目属性 -->
+        <ul class="ul4">
+            <li>1</li>
+            <li class="li">2</li>
+            <li>3</li>
+        </ul>
+
+        <ul class="ul5">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+
+        <ul class="ul6">
+            <li class="li01">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+
+        <div class="text">
+            <div class="text01"></div>
+        </div>
+
+        <div class="text02">
+            <section>问世间情为何物</section>
+        </div>
+    </body>
+</html>

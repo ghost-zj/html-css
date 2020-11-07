@@ -1,0 +1,73 @@
+/*定位*/
+.relative{
+    position:relative;
+}
+.absolute{
+    top:20px;
+    right:20px;
+    bottom:20px;
+    left: 20px;
+}
+.fixed{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+}
+.static{
+    position: static;
+}
+
+/*盒模型*/
+/* 标准盒子模型 */
+* {box-sizing:content-box} 
+/* width=content */
+/* IE盒子模型 */
+/* box-sizing:border-box */
+/* width=content+padding+border */
+/*IE盒子模型*/
+*{box-sizing:border-box}
+
+/*选择器*/
+/*ID*/
+#ID{background-color: blue;}
+/*标签*/
+body{background-color: blue;}
+/*类*/
+.class{background-color: blue;}
+/*伪类*/
+dog:active,:focus,:hover,:link,:visited,:lang(){background-color: blue;}
+/*属性*/
+a[href]{background-color: blue;}
+/*结构*/
+/*tony的子孙中所有叫nick的*/
+#tony.nick{color: blue;}
+/*tony的儿子中所有叫nick的*/
+#tony>nick{background-color: blue;}
+/*紧挨着tony后面的那个叫nick的*/
+#tony+nick{background-color: blue;}
+
+/*选择器优先级*/
+/*
+1、基本选择器：
+通配符选择器*
+元素选择器p
+id
+class
+群组选择器
+2、层次选择器
+包含选择器
+子选择器
+相邻兄弟选择器
+通用选择器
+3、属性选择器
+4、动态伪类选择器
+5、结构伪类选择器
+6、目标伪类选择器
+7、UI元素状态伪类选择器
+!important(无穷大)>行间(1000)>id（100）>class（10）>标签（1）
+*/
+
+
+
