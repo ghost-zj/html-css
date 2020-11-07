@@ -1,0 +1,19 @@
+/************
+*日期：2020-06-30
+*作者：朱公子
+*用途：大的结构
+*other:无
+*version:1.0
+*/
+/*header*/
+.header{
+    width:1002px;height: 170px;background:#F6F6F6;
+    padding: 0 0 0 190px;
+    margin: 0 auto;
+    position: relative;
+}
+/*main*/
+#mainID{
+    width: 1192px;height: 480px;background: #F6F6F6;
+    margin: 0 auto;
+}

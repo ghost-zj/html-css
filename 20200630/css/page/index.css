@@ -1,0 +1,261 @@
+/************
+*日期：2020-06-30
+*作者：朱公子
+*用途：首页的css
+*other:无
+*version:1.0
+*/
+/*logo*/
+.logoDiv{
+    width: 190px;height: 170px;
+    position: absolute;top: 0;left: 0;
+}
+/*顶部导航条*/
+.topMenu{
+    width:100%;height:29px;
+    background:#E3E4E6;
+    border-bottom: 1px solid #ddd;
+    float: right;
+}
+.topMenu lable.cityName{
+    float: left;height: 20px;padding-left: 20px;
+    margin: 6px 0 0 20px;color: #6F6E7E;
+    background: url("../../image/icons/icons.png") no-repeat 0 --30px;
+}
+.topMenu ul{
+    float: right;
+}
+.topMenu ul li{
+    float: left;padding: 0 12px;color: #6F6E7E;line-height: 29px;
+}
+.topMenu ul li p{float: left;}
+.topMenu ul li i.popUpBtn{
+    width: 12px;height: 7px;float: right;margin: 12px o o 6px;
+    background: url("../../image/icons/icons.png") no-repeat left top;
+    cursor: pointer;
+}
+.topMenu ul li.red{color: #f00;}
+.topMenu ul em{
+    width: 1px;height: 10px;background: #6F6E71;overflow: hidden;float:left;
+    margin:9px 0 0 0;
+}
+/*header搜索框*/
+.searchWrap{
+    width: 840px;height: 70px;
+    position: absolute;
+    top: 55px;left: 320px;
+}
+input.headerSearch{
+    width: 498px;height: 33px;background: #fff;
+    border: 1px solid #f00;float: left;color: #6f6e71;
+    padding-left: 5px;
+}
+input.searchBtn{
+    width: 50px;height: 35px;background: #f00;
+    float: left;border: 0;
+    background-color: #f00;
+    background-image: url("../../image/icons/icon.jpg");
+    background-position: 13 -53px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.myShopDiv{
+    width: 188px;height: 33px;float: left;
+    margin-left: 31px;
+    background-color: #fff;
+    background-image: url("../../image/icons/icon.jpg");
+    background-position: 36 -90px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    text-align: center;line-height: 33px;
+    color: #f00;
+    position: relative;
+}
+.myShopDiv i.shopNum{
+    position: absolute;top: 3px;right: 41px;
+    width: 18px;height: 18px;background: #f00;
+    color: #fff;font-size: 12px;text-align: center;line-height: 18px;
+    border-radius: 100%;
+}
+
+/*栏目导航条*/
+.columnDiv{
+    position: absolute;bottom: 11px;left: 230px;
+}
+.columnDiv li{
+    float: left;font-size: 16px;font-weight: bold;color: #565455;
+    padding: 0 21px;
+}
+.columnDiv em{
+    width: 1px;height: 10px;background: #6F6E71;overflow: hidden;float: left;
+    margin: 9px 0 0 0;
+}
+.columnDiv i.hot{
+    width: 30px;height: 18px;
+    background: url("../../image/icons/icon.jpg") no-repeat center;
+    display: block;top: -10px;right: -9px;;
+}
+/*product导航条*/
+.productNav{
+    float: left;width: 190px;height: 480px;background: #6E6568;
+}
+.productNav ul{
+    margin-top: 16px;
+}
+.productNav ul li{
+    /*这是个人习惯写法，不写也可以*/
+    clear: both;
+    height: 30px;
+    padding-left: 12px;
+    position: relative;
+}
+/*定义了li标签的hover*/
+.productNav ul li:hover{
+    background: #ddd;
+    cursor: pointer;
+}
+.productNav ul li p{
+    line-height: 30px;
+    text-align:left;font-size:12px;
+    color:#ddd；
+}
+/*这个是li里面的p的hover*/
+.productNav ul li:hover p{
+    color: #6E6568;
+    cursor: pointer;
+}
+.productNav ul li div.popup{
+    position: absolute;top: 0;right: -240px;
+    width: 240px;height: 200px;background: #ddd;
+    display: none;z-index: 12;
+}
+.productNav ul li:hover div.popup{
+    display: block;
+}
+/*轮播图*/
+.sliderDiv{
+    width: 992px;height: 340px;float: right;overflow: hidden;
+    position: relative;
+}
+.sliderDiv ul{
+    width: 3992px;
+    position: absolute;top: 0;left: 0;
+    z-index: 8;
+}
+.sliderDiv ul li{
+    width: 998px;height: 340px;float: right;overflow: hidden;
+}
+.sliderDiv ul li img{
+    width: 998px;height: 340px;
+}
+.sliderDiv lable,.sliderDiv span{
+    width: 37px;height: 66px;background: #000;
+    position: absolute;top: 130px;font-size: 18px;color: #fff;
+    text-align: center;line-height: 66px;
+    cursor: pointer;
+    filter: alpha(opacity=30);/*支持IE浏览器*/
+    -moz-opacity:0.30;/*支持FireFox浏览器*/
+    opacity: 0.30;/*支持Chrome,Opera,Safari等浏览器*/
+    z-index: 9;
+}
+
+.sliderDiv label{left: 0;}
+.sliderDiv span{right: 0;}
+
+.sliderDiv label:hover{
+    filter: alpha(opacity=70);/*支持IE浏览器*/
+    -moz-opacity:0.70;/*支持FireFox浏览器*/
+    opacity: 0.70;/*支持Chrome,Opera,Safari等浏览器*/
+}
+.sliderDiv span:hover{
+    filter: alpha(opacity=70);/*支持IE浏览器*/
+    -moz-opacity:0.70;/*支持FireFox浏览器*/
+    opacity: 0.70;/*支持Chrome,Opera,Safari等浏览器*/
+}
+/*小白点*/
+.pointerBtn{
+    width: 160px;height: 21px;
+    position: absolute;z-index: 11;
+    bottom: 20px;
+    left: 50%;margin-left: -80px;
+}
+.pointerBtn ul{
+    width: auto;position: static;
+}
+.pointerBtn ul li{
+    background: #fff;border-radius: 100%;margin: 3px 0 0 10px;
+    width: 15px;height: 15px;float: left;
+}
+.pointerBtn ul li.bgRed{
+    background: #f00;
+}
+.pointerBtn ul li:hover{
+    background: #f00;cursor: pointer;
+}
+/*小白点半透明背景*/
+.pointerBtnBg{
+    width: 160px;height: 21px;position: absolute;z-index: 10;
+    bottom: 20px;background: #fff;
+    left: 50%;margin-left: -80px;
+    filter: alpha(opacity=50);/*支持IE浏览器*/
+    -moz-opacity:0.50;/*支持FireFox浏览器*/
+    opacity: 0.50;/*支持Chrome,Opera,Safari等浏览器*/
+    border-radius: 10px;
+}
+/*广告位*/
+.adDiv{
+    width: 992px;height: 130px;float: right;
+}
+.adDiv img{
+    width: 490px;height: 130px;
+}
+/*享品质*/
+.productListTitle{
+    width: 1155px;height: 50px;margin: 0 auto;
+    background-color: #F6F6F6;
+    background-image: url("../../image/bg_1.jpg");
+    background-position: center;
+    background-repeat: repeat-x;
+    text-align: center;
+}
+.productListTitle p{
+    display: inline-block;padding: 0 56px;
+    background: #F6F6F6;height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+}
+
+/*产品列表*/
+.productList{
+    width: 1157px;height: 180px;margin: 0 auto;
+}
+.productBlock{
+    width: 379px;height: 170px;
+}
+
+.productBg_1{background: url("../../image/temp/temp1.png") no-repeat;}
+.productBg_2{background: url("../../image/temp/temp2.png") no-repeat;}
+.productBg_3{background: url("../../image/temp/temp3.png") no-repeat;}
+
+.productBlock dl{
+    height: 170px;width: 136px;float: left;
+}
+
+.productBlock dl.bg_1{background: #d78e28;}
+.productBlock dl.bg_2{background: #498c94;}
+.productBlock dl.bg_3{background: #5c5566;}
+
+.productBlock dl dt{
+    width: 97px;height: 40px;margin: 45px auto 0 auto;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    text-align: center;line-height: 40px;color: #fff;
+    font-size: 22px;
+}
+.productBlock dl dd{
+    width: 97px;height: 40px;margin: 0 auto;
+    text-align: center;line-height: 40px;color: #fff;
+    font-size: 12px;
+}

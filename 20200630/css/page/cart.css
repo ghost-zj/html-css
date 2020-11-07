@@ -1,0 +1,118 @@
+/************
+*日期：2020-06-30
+*作者：朱公子
+*用途：购物车的css
+*other:无
+*version:1.0
+*/
+/*title*/
+.cartTitle{
+    width: 1192px;height: 40px;margin: 0 auto;
+    position: relative;
+}
+.cartTitle label{
+    font-size: 22px;font-weight: bold;
+    color: #f00;border-bottom: 3px solid #f00;
+    position: absolute;left: 0;bottom: -3px;
+    /*float: left;line-height: 52px;height: 40px;*/
+}
+.cartTitle i.titleNum{font-weight: bold;}
+
+/*table header*/
+.cartHead{
+    width: 1164px;height: 51px;margin: 0 auto;
+    background: #F3F3F3;border: 1px solid #A69E9E;
+    padding: 0 13px;line-height: 51px;
+}
+.cartHead li{float: left;}
+.cartHead li.w_1{width: 148px;}
+.cartHead li.w_2{width: 587px;}
+.cartHead li.w_3{width: 113px;}
+.cartHead li.w_4{width: 153px;}
+.cartHead li.w_5{width: 83px;}
+
+/*商品列表*/
+.cartWrap{
+    width: 1192px;margin: 0 auto;
+}
+.goodsItem{
+    width: 100%;height: 140px;background: #FFF4E8;
+}
+.goodsItem li{float: left;}
+.goodsItem li.w_1{
+    width: 15px;margin: 23px 23px 0 14px;
+}
+.goodsItem li.w_2{
+    width: 96px;height: 96px;margin: 18px 12px 0 0;
+    background: #fff;overflow: hidden;
+    border: 1px solid #ddd;text-align: center;
+}
+.goodsItem li.w_2 img{width: 85px;}
+.goodsItem li.w_3{
+    width: 545px;margin-top: 23px;
+}
+.goodsItem li.w_4{
+    width: 110px;margin-top: 23px;
+    text-align: center;
+}
+.goodsItem li.w_5{
+    width: 131px;margin-top: 23px;
+}
+.goodsItem li.w_6{width: 153px;margin-top: 23px;text-align: center;}
+.goodsItem li.w_7{margin-top: 23px;}
+
+/*商品输入框*/
+.enterGoodsNum{
+    width: 94px;height: 24px;
+    border: 1px solid #ddd;margin: 0 auto;
+    overflow: hidden;position: relative;
+}
+input.goods_a,input.goods_c{
+    width: 20px;height: 24px;display: block;
+    background: #fff;position: absolute;top: 0;
+    border: 0;cursor: pointer;
+}
+input.goods_a{border-right: 1px solid #ddd;position: absolute;left: 0;}
+input.goods_c{border-right: 1px solid #ddd;position: absolute;right: 0;}
+input.goods_b{
+    width: 53px;height: 24px;border: 0;
+    display: block;margin: 0 auto;text-align: center;
+}
+.goodsLine{
+    width: 100%;height: 1px;background: #666;
+    margin: 11px 0;
+}
+
+/*cartfooter*/
+.cartFooter{
+    width: 1192px;height: 60px;background: #fff;
+    border: 1px solid #ddd;margin: 0 auto;position: relative;
+}
+.footerCheck{float: left;}
+.footerCheck input.chk,.footerCheck label{
+    float: left;margin: 24px 0 0 11px;
+}
+.goodsSelect{
+    position: absolute;top: 13px;right: 463px;
+}
+.goodsSelect i{
+    padding: 0 4px;font-weight: bold;color: #f00;
+}
+.totalMoney{
+    position: absolute;top: 13px;right: 315px;
+}
+.totalMoney i{
+    padding: 0 4px;font-weight: bold;color: #f00;
+}
+.saveMoney{
+    position: absolute;top: 38px;right: 317px;
+}
+.saveMoney i{
+    padding: 0 4px;font-weight: bold;color: #f00;
+}
+.gotoPayBtn{
+    position: absolute;top: 0;right: 0;
+    width: 115px;height: 60px;background: #f00;
+    color: #fff;font-size: 22px;font-weight: bold;
+    text-align: center;line-height: 60px;
+}

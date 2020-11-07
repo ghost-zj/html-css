@@ -1,0 +1,30 @@
+/************
+*日期：2020-06-30
+*作者：朱公子
+*用途：公共的css
+*other:无
+*version:1.0
+*/
+/*logo*/
+.pa{position: absolute;}
+.pr{position: relative;}
+
+.fl{float: left;}
+.fr{float: right;}
+
+.mT3{margin-top: 3px;}
+.mT10{margin-top: 10px;}
+
+.mR5{margin-right: 5px;}
+.mR10{margin-right: 10px;}
+
+.disNo{display: none;}
+
+.cle:after{
+    clear: both;
+    content: ".";
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
