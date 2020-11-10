@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <title>提交按钮加载动画效果</title>
+        
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            body{
+                width: 100vw;
+                height: 100vh;
+               /* 做一个弹跳的小球，使其居中，
+               可以使用栅格也可以使用弹性盒模型 */
+               display: grid;
+               grid-template: 1fr/1fr;
+            }
+
+         button{
+             width: 200px;
+             height: 50px;
+             background: #ecf0f1;
+             color: #34495e;
+             border: solid 1px #ddd;
+             justify-self: center;
+             align-self: center;
+         }
+         
+         /* 使用伪类制作按钮的动态效果动画 */
+         button::after{
+             content:'';
+             width: 3px;
+             height: 3px;
+             display: inline-block;
+             box-shadow: 3px 0 0 currentColor,
+             9px 0 0 currentColor, 15px 0 0 currentColor;
+             animation-name: hd;
+             animation-duration: 1s;
+             animation-iteration-count: infinite;
+         }
+         @keyframes hd{
+             from{
+                 box-shadow: none;
+             }
+             30%{
+                 box-shadow: 3px 0 0 currentColor;
+             }
+             60%{
+                 box-shadow: 3px 0 0 currentColor,9px 0 0 currentColor;
+             }
+             90%{
+                 box-shadow: 3px 0 0 currentColor,9px 0 0 currentColor,15px 0 0 currentColor;
+             }
+         }
+            
+  
+        </style>
+    </head>
+    <body>
+        <button>提交</button>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <title>animation动画组合定义语法</title>
+        
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            body{
+                width: 100vw;
+                height: 100vh;
+               background: #2c3e50;
+               display: grid;
+            }
+
+            ul{
+                list-style: none;
+                width: 400px;
+                height: 100px;
+                align-self: center;
+                justify-self: center;
+                display: grid;
+                grid-template: 1fr/repeat(2, 1fr);
+
+            }
+
+            li{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background: #e67e22;
+                animation-duration: 2s;
+                animation-delay: 2s;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+                
+                /* animation-name: ;
+                animation-duration: ;
+                animation-timing-function: ;steps步进动画、贝塞尔曲线ease---ease-in----ease-out----ease-in-out-----linear
+                animation-direction: ;动画运动方向-normal-reverse-alternate----alternate-reverse
+                animation-iteration-count: ;动画运动次数
+                animation-fill-mode: ;动画填充模式-backwards-forwards-both
+                animation-delay: ; 
+                animation-play-state: ;控制动画播放、暂停*/
+            }
+            li:nth-child(1){
+                /* animation-name: hd;
+                animation-fill-mode: both; */
+                animation: hd both 2s 2s;
+            }
+            li:nth-child(2){
+                animation-name: hd;
+                animation-fill-mode: backwards;
+            }
+
+            @keyframes hd{
+                from{
+                    transform: scale(0);
+                }
+                to{
+                    transform: scale(1);
+                    background: chartreuse;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+        
+        
+    </body>
+</html>

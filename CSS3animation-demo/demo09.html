@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <title>animation-iteration-count+优先级</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            body{
+                width: 100vw;
+                height: 100vh;
+                background: #34495e;
+                /* 弹性盒模型 */
+                display: flex;
+                /* 主轴为居中交叉轴居中 */
+                justify-content: center;
+                align-items: center;
+            }
+
+            main{
+                width: 400px;
+                height: 400px;
+                border: solid 1px white;
+            }
+
+            div{
+                width: 100px;
+                height: 100px;
+                background: #f1c40f;
+                animation-name: translate,background,radius;
+                /* 针对animation-name,谁在后面出现，谁的优先级就最高，谁的权重就最大 */
+
+                animation-duration: 4s;
+                animation-iteration-count: infinite,2;
+                /* 当数量不够动画名字时, 第三个动画名字开始按照第一个动画名字的数量开始计算*/
+            }
+
+            @keyframes translate{
+                25%{
+                    transform: translateX(300px);
+                   
+                }
+                50%{
+                    transform: translate(300px 300px);
+                   
+                }
+                75%{
+                    transform: translateY(300px);
+                }
+               
+
+               /* 开头和结尾不用再写了，会自动配置为原始状态 */
+            }
+
+            @keyframes background{
+                25%{
+                    background: #2ecc71;
+                    /* transform: translateX(300px); */
+                   
+                }
+                50%{
+                    background: #e67e22;
+                   
+                }
+                75%{
+                    background: #9b59b6;
+                }
+            }
+            @keyframes radius{
+                /* 对比background的颜色变换 */
+                from,
+                to{
+                    background: #95a5a6;
+                }
+                25%{
+                    border-radius: 50%;
+                   
+                }
+                50%{
+                    border-radius: 0%;
+                   
+                }
+                75%{
+                    border-radius: 50%;
+                }
+               
+               /* 开头和结尾不用再写了，会自动配置为原始状态 */
+            }
+            
+        </style>
+    </head>
+    <body>
+        <main>
+            <div></div>
+        </main>
+    </body>
+</html>

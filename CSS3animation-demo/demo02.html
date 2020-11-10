@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <title>帧顺序：起始帧-终点帧</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            body{
+                width: 100vw;
+                height: 100vh;
+                background: #34495e;
+                /* 弹性盒模型 */
+                display: flex;
+                /* 主轴为居中交叉轴居中 */
+                justify-content: center;
+                align-items: center;
+            }
+
+            main{
+                width: 100px;
+                height: 100px;
+                background: white;
+                animation-name: hd;
+                animation-duration: 2s;
+            }
+
+            @keyframes hd{
+               /* 没有0%，系统给自动配置起始状态为原始样式 */
+                /* 0%{
+                    background: white;
+                } */
+               /* 没有100%，也会自动配置为原始的样式 */
+                100%{
+                    background: tomato;
+                }
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <main></main>
+    </body>
+</html>

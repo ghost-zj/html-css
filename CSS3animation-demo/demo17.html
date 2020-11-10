@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <title>盒阴影偏移技巧和currentColor特性</title>
+        
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            body{
+                width: 100vw;
+                height: 100vh;
+                background: #34495e;
+               /* 做一个弹跳的小球，使其居中，可以使用栅格也可以使用弹性盒模型 */
+                display: grid;
+                grid-template: 1fr/1fr;
+            }
+
+            div{
+                width: 50px;
+                height: 50px;
+                /* div的颜色 */
+                background: red;
+                align-self: center;
+                /* 起始位置 */
+                justify-self: start;
+                color: yellowgreen;
+                /* 阴影特性+表示获取当前元素所定义的文本颜色color */
+                /* box-shadow:水平、垂直、模糊、颜色（当前使用的color颜色） */
+                box-shadow: 50px 50px 0 currentColor;
+            }
+            
+  
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

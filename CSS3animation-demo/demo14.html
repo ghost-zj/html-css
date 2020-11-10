@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <title>微场景布局、动画效果</title>
+        
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            body{
+                width: 100vw;
+                height: 100vh;
+                /* 栅格 */
+               display: grid;
+               grid-template-rows: 10vh 1fr 10vh;
+
+            }
+            
+            header{
+                background: #e67e22;
+                /* 内容居中 */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* 字体大小、颜色 */
+                font-size: 2em;
+                color: white;
+                animation-name: translate;
+                animation-duration: .5s;
+            }
+            main{
+                background: url("image/1.jpg") no-repeat;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                animation-name: rotate;
+                animation-duration: .5s;
+                animation-delay: 2s;
+                animation-fill-mode: backwards;
+            }
+            /* main div{} */
+            div{
+                width: 80vw;
+                border-radius: 10px;
+                padding: 10px;
+                color: white;
+                opacity: .8;
+                box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+            }
+
+            .opacity{
+                animation-name: opacity;
+                animation-duration: .5s;
+                animation-fill-mode: backwards;
+            }
+            .s3{
+                animation-delay: 3s;
+            }
+            .s4{
+                animation-delay: 4s;
+            }
+
+
+
+
+
+            div:nth-child(1){
+                transform: translateY(-50px);
+                background: #8e44ad;
+                
+            }
+
+            div:nth-child(2){
+                background: #e74c3c;
+                /* animation-name: opacity;
+                animation-duration: .5s;
+                animation-delay: 3.5s;
+                animation-fill-mode: backwards; */
+            }
+            footer{
+                /* 内容居中 */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* 字体大小、颜色 */
+                font-size: 1.3em;
+                color: white;
+                background: #34495e;
+                /* 初始状态 */
+                transform: scale(0);
+                /* 填充模式,使他保存到100%那个帧 */
+                animation-fill-mode: forwards;
+                /* 当动画还未运行时，动画没动的时候，就是起始状态，延迟之前
+                ，它的状态是使用起始帧，也就是让它是消失的 */
+                /* animation-fill-mode: backwards; */
+                /* 延迟之后，也就是消失完之后，走完之后就回到初始状态 ，初始状态就是显示的*/
+                animation-name: rotate;
+                animation-duration: .5s;
+                animation-delay: 1s;
+               
+                }
+
+
+                @keyframes translate{
+                    from{
+                        transform: translateX(-100vw);
+                    }
+                    to{
+                        transform: translateX(0);
+                    }
+                }
+                @keyframes rotate{
+                    from{
+                        transform: scale(0) rotate(360deg);
+                    }
+                    to{
+                        transform: scale(1) rotate(0deg);
+                    }
+                }
+
+                @keyframes opacity{
+                    from{
+                        opacity: 0;
+                    }
+                    to{
+                        opacity: 1;
+                    }
+                }
+
+            
+            
+        </style>
+    </head>
+    <body>
+        <header>后盾人</header>
+        <main>
+            <div class="opacity s3">
+                Nobody can go back and start a new beginning,
+                 but anyone can start today and make a new 
+                 ending.—Maria Robinson</div>
+            <div class="opacity s4">
+                Faith is taking the first step even when 
+                you don't see the whole staircase.——Martin 
+                Luther King Jr.
+            </div>
+        </main>
+        <footer>houdunren.com</footer>
+    </body>
+</html>
